@@ -83,7 +83,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-brand-blue to-brand-green rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
                 <Coins className="text-white w-5 h-5" />
               </div>
               <h1 className="text-lg sm:text-xl font-poppins font-bold text-slate-900">{t('header.title')}</h1>
@@ -92,7 +92,7 @@ export default function Home() {
               <LanguageToggle variant="header" />
               <Button 
                 onClick={handleFacebookRedirect}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-1 sm:space-x-2"
+                className="bg-orange-600 hover:bg-orange-700 text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-1 sm:space-x-2"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span className="hidden sm:inline">{t('header.getStarted')}</span>
@@ -104,14 +104,16 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-green-900/20"></div>
+      <section className="relative py-20 lg:py-32" style={{
+        background: 'linear-gradient(135deg, #ff6600 0%, #ff8533 30%, #cc5200 70%, #1a1a1a 100%)'
+      }}>
+        <div className="absolute inset-0 bg-black/10"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-white mb-6 leading-tight drop-shadow-lg">
               {t('hero.title')}
-              <span className="block text-yellow-300 drop-shadow-lg">{t('hero.subtitle')}</span>
+              <span className="block text-orange-200 drop-shadow-lg">{t('hero.subtitle')}</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0 drop-shadow-md">
               {t('hero.description')}
@@ -120,27 +122,24 @@ export default function Home() {
             <div className="flex flex-col gap-4 justify-center items-center mb-8">
               <Button 
                 onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
-                className="w-full sm:w-auto bg-viet-red hover:bg-red-700 text-white px-8 py-4 rounded-xl font-poppins font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+                className="w-full sm:w-auto bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-poppins font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
               >
                 {t('hero.joinWaitlist')}
               </Button>
-              <p className="text-white/80 text-center text-sm sm:text-base">
-                {t('hero.comingSoon')}
-              </p>
             </div>
 
             {/* Trust indicators */}
             <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-white/90">
-              <div className="flex items-center space-x-2 text-sm sm:text-base bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm">
-                <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-300" />
+              <div className="flex items-center space-x-2 text-sm sm:text-base bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm">
+                <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-orange-300" />
                 <span className="font-medium">{t('hero.bankSecurity')}</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm sm:text-base bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm">
-                <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-300" />
+              <div className="flex items-center space-x-2 text-sm sm:text-base bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm">
+                <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-orange-300" />
                 <span className="font-medium">{t('hero.fastTransfer')}</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm sm:text-base bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm">
-                <Percent className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-300" />
+              <div className="flex items-center space-x-2 text-sm sm:text-base bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm">
+                <Percent className="w-5 h-5 sm:w-6 sm:h-6 text-orange-300" />
                 <span className="font-medium">{t('hero.lowFees')}</span>
               </div>
             </div>
@@ -289,7 +288,7 @@ export default function Home() {
           <div className="text-center mt-16">
             <Button 
               onClick={handleFacebookRedirect}
-              className="inline-flex items-center space-x-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-poppins font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center space-x-3 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-poppins font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
             >
               <MessageCircle className="w-5 h-5" />
               <span>{t('howItWorks.tryNow')}</span>
@@ -417,7 +416,7 @@ export default function Home() {
                   <Button 
                     type="submit" 
                     disabled={joinWaitlistMutation.isPending}
-                    className="w-full bg-gradient-to-r from-brand-blue to-brand-green hover:from-blue-700 hover:to-green-700 text-white py-4 rounded-lg font-poppins font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-4 rounded-lg font-poppins font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
                   >
                     {joinWaitlistMutation.isPending ? t('waitlist.submitting') : t('waitlist.submitButton')}
                   </Button>
@@ -437,12 +436,12 @@ export default function Home() {
 
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-16">
+      <footer style={{background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)'}} className="text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-2">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-brand-blue to-brand-green rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
                   <Coins className="text-white w-5 h-5" />
                 </div>
                 <h3 className="text-xl font-poppins font-bold">LiXi</h3>
@@ -451,7 +450,7 @@ export default function Home() {
                 {t('footer.description')}
               </p>
               <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors duration-200">
+                <div className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors duration-200">
                   <Facebook className="w-5 h-5" />
                 </div>
               </div>
@@ -492,18 +491,18 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="border-t border-slate-800 mt-12 pt-8">
+          <div className="border-t border-slate-700 mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-slate-400 text-sm">
-                © 2024 VietCoin Remit. All rights reserved.
+                {t('footer.rights')}
               </p>
               <div className="flex items-center space-x-6 mt-4 md:mt-0">
                 <div className="flex items-center space-x-2 text-slate-400 text-sm">
-                  <Shield className="w-4 h-4 text-brand-green" />
+                  <Shield className="w-4 h-4 text-orange-400" />
                   <span>Licensed Money Transmitter</span>
                 </div>
                 <div className="flex items-center space-x-2 text-slate-400 text-sm">
-                  <Shield className="w-4 h-4 text-brand-blue" />
+                  <Shield className="w-4 h-4 text-orange-500" />
                   <span>256-bit SSL Encryption</span>
                 </div>
               </div>

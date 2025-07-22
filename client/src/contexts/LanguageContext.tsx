@@ -14,11 +14,11 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const en = {
   // Header
   'header.title': 'LiXi',
-  'header.getStarted': 'Coming Soon',
+  'header.getStarted': 'Get Started',
   
   // Hero Section
-  'hero.title': 'Launching Soon',
-  'hero.subtitle': 'A revolutionary stablecoin remittance service through Facebook Messenger.',
+  'hero.title': 'Send Money to Vietnam',
+  'hero.subtitle': 'Fast, Secure, Affordable',
   'hero.description': 'No apps to download. No complicated logins. Just simple, secure transfers to family in Vietnam — in minutes.',
   'hero.joinWaitlist': 'Join Waitlist',
   'hero.tryMessenger': 'Coming Soon',
@@ -44,7 +44,7 @@ const en = {
   'values.focused.description': 'Built by and for the Vietnamese-American community. Language and UX tailored to your needs.',
   
   // How It Works
-  'howItWorks.title': 'How It Works (Beta Preview)',
+  'howItWorks.title': 'How It Works',
   'howItWorks.subtitle': 'Three simple steps to send money to Vietnam',
   'howItWorks.step1.title': 'Message Us',
   'howItWorks.step1.description': 'Chat with our Vietnamese-speaking bot via Facebook Messenger. No app needed.',
@@ -58,7 +58,7 @@ const en = {
   'social.title': 'Built for the Community',
   'social.subtitle': 'Join Our Pilot Cohort',
   'social.pilotDescription': 'We\'re launching a private beta for the first 500 families.',
-  'social.bonus': 'Bonus: First transfer is free once we go live!',
+  'social.bonus': 'Bonus: First transfer is free for the first 500 families once we go live!',
   'social.communityMessage': 'Be part of the future of remittances — and help shape a product built for our community.',
   'social.founderQuote': '"I built LiXi because I saw my own parents struggle to send money to Vietnam. Long drives. High fees. Complicated apps. It shouldn\'t be this hard."',
   'social.founderName': '— Tien Nguyen, Founder',
@@ -84,18 +84,18 @@ const en = {
   
   // Footer
   'footer.description': 'Revolutionizing remittances for the Vietnamese-American community through stablecoin technology and messenger convenience.',
-  'footer.rights': 'All rights reserved.',
+  'footer.rights': '© 2025 LiXi. All rights reserved.',
 };
 
 // Vietnamese translations
 const vi = {
   // Header
   'header.title': 'LiXi',
-  'header.getStarted': 'Sắp Ra Mắt',
+  'header.getStarted': 'Bắt Đầu',
   
   // Hero Section
-  'hero.title': 'Sắp Ra Mắt',
-  'hero.subtitle': 'Dịch vụ chuyển tiền stablecoin cách mạng qua Facebook Messenger.',
+  'hero.title': 'Gửi Tiền Về Việt Nam',
+  'hero.subtitle': 'Nhanh, An Toàn, Tiết Kiệm',
   'hero.description': 'Không cần tải ứng dụng. Không cần đăng nhập phức tạp. Chỉ cần chuyển tiền đơn giản, an toàn cho gia đình ở Việt Nam — trong vài phút.',
   'hero.joinWaitlist': 'Đăng Ký Chờ',
   'hero.tryMessenger': 'Sắp Ra Mắt',
@@ -121,7 +121,7 @@ const vi = {
   'values.focused.description': 'Được xây dựng bởi và cho cộng đồng Việt kiều Mỹ. Chúng tôi hiểu nhu cầu và văn hóa riêng của bạn.',
   
   // How It Works
-  'howItWorks.title': 'Cách Thức Hoạt Động (Xem Trước Beta)',
+  'howItWorks.title': 'Cách Thức Hoạt Động',
   'howItWorks.subtitle': 'Ba bước đơn giản để gửi tiền về Việt Nam',
   'howItWorks.step1.title': 'Nhắn Tin Cho Chúng Tôi',
   'howItWorks.step1.description': 'Trò chuyện với bot nói tiếng Việt của chúng tôi qua Facebook Messenger. Không cần ứng dụng.',
@@ -135,7 +135,7 @@ const vi = {
   'social.title': 'Xây Dựng Cho Cộng Đồng',
   'social.subtitle': 'Tham Gia Nhóm Thí Điểm Của Chúng Tôi',
   'social.pilotDescription': 'Chúng tôi đang ra mắt bản beta riêng cho 500 gia đình đầu tiên.',
-  'social.bonus': 'Ưu đãi: Chuyển tiền đầu tiên miễn phí khi chúng tôi hoạt động!',
+  'social.bonus': 'Ưu đãi: Chuyển tiền đầu tiên miễn phí cho 500 gia đình đầu tiên khi chúng tôi hoạt động!',
   'social.communityMessage': 'Hãy là một phần của tương lai chuyển tiền — và giúp định hình sản phẩm được xây dựng cho cộng đồng của chúng ta.',
   'social.founderQuote': '"Tôi xây dựng LiXi vì thấy chính bố mẹ mình vất vả để gửi tiền về Việt Nam. Phải đi xa. Phí cao. Ứng dụng phức tạp. Không nên khó khăn như vậy."',
   'social.founderName': '— Tiến Nguyễn, Người Sáng Lập',
@@ -161,7 +161,7 @@ const vi = {
   
   // Footer
   'footer.description': 'Cách mạng hóa chuyển tiền cho cộng đồng Việt kiều Mỹ thông qua công nghệ stablecoin và sự tiện lợi của messenger.',
-  'footer.rights': 'Mọi quyền được bảo lưu.',
+  'footer.rights': '© 2025 LiXi. Mọi quyền được bảo lưu.',
 };
 
 const translations = { en, vi };

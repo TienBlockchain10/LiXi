@@ -120,6 +120,19 @@ Language support: English and Vietnamese with toggle functionality
 
 ## Recent Changes
 
+- **Orange/Black Dragon Theme Update (January 2025)**: Updated brand colors to match pitch deck design
+  - Implemented orange gradient hero background (#ff6600 to #1a1a1a) inspired by dragon motif
+  - Updated all brand colors from blue/green to orange/black theme throughout the application
+  - Changed buttons, icons, and accent colors to match new orange branding
+  - Updated footer with dark gradient background for cohesive design
+
+- **Content Refinement (January 2025)**: Updated messaging and removed beta language
+  - Changed hero title back to "Send Money to Vietnam" with "Fast, Secure, Affordable" subtitle
+  - Removed "Launching Soon" and "Beta Preview" tags per user feedback
+  - Updated bonus messaging to clarify "first 500 families" instead of "everyone"
+  - Fixed footer copyright to "© 2025 LiXi. All rights reserved."
+  - Maintained pilot cohort messaging and founder story elements
+
 - **Vietnamese Language Support (January 2025)**: Added complete bilingual functionality
   - Created LanguageContext with comprehensive translations for all UI text
   - Implemented LanguageToggle component with header and hero variants  
