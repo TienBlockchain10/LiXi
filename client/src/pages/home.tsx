@@ -117,21 +117,16 @@ export default function Home() {
               {t('hero.description')}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div className="flex flex-col gap-4 justify-center items-center mb-8">
               <Button 
                 onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
                 className="w-full sm:w-auto bg-viet-red hover:bg-red-700 text-white px-8 py-4 rounded-xl font-poppins font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
               >
                 {t('hero.joinWaitlist')}
               </Button>
-              <Button 
-                onClick={handleFacebookRedirect}
-                variant="outline"
-                className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-xl font-poppins font-semibold text-lg transition-all duration-200 hover:bg-white/20 flex items-center justify-center space-x-2"
-              >
-                <MessageCircle className="w-5 h-5" />
-                <span>{t('hero.tryMessenger')}</span>
-              </Button>
+              <p className="text-white/80 text-center text-sm sm:text-base">
+                {t('hero.comingSoon')}
+              </p>
             </div>
 
             {/* Trust indicators */}
@@ -304,111 +299,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-slate-900 mb-4">
-              {t('social.title')}
-            </h2>
-            <p className="text-xl text-slate-600">
+      {/* Community/Pilot Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-slate-900 mb-6">
+            {t('social.title')}
+          </h2>
+          
+          <div className="bg-white rounded-2xl p-8 sm:p-12 shadow-lg mb-12">
+            <h3 className="text-2xl font-poppins font-bold text-slate-900 mb-4">
               {t('social.subtitle')}
+            </h3>
+            <p className="text-lg text-slate-600 mb-6">
+              {t('social.pilotDescription')}
+            </p>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
+              <p className="text-green-800 font-medium">
+                🎁 {t('social.bonus')}
+              </p>
+            </div>
+            <p className="text-slate-700 leading-relaxed">
+              {t('social.communityMessage')}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-slate-50">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400 text-xl">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-current" />
-                    ))}
-                  </div>
+          <Card className="bg-blue-50 border-blue-200">
+            <CardContent className="p-8">
+              <div className="flex items-center justify-center mb-6">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">TN</span>
                 </div>
-                <p className="text-slate-700 mb-6 italic leading-relaxed">
-                  {t('social.testimonial1')}
-                </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mr-4">
-                    <span className="text-white font-semibold">LN</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-slate-900">Linda Nguyen</p>
-                    <p className="text-slate-600 text-sm">San Jose, CA</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-slate-50">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400 text-xl">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-current" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-slate-700 mb-6 italic leading-relaxed">
-                  {t('social.testimonial2')}
-                </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center mr-4">
-                    <span className="text-white font-semibold">DT</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-slate-900">David Tran</p>
-                    <p className="text-slate-600 text-sm">Houston, TX</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-slate-50">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400 text-xl">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-current" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-slate-700 mb-6 italic leading-relaxed">
-                  {t('social.testimonial3')}
-                </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center mr-4">
-                    <span className="text-white font-semibold">ML</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-slate-900">Michelle Le</p>
-                    <p className="text-slate-600 text-sm">Orange County, CA</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Statistics */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl md:text-4xl font-poppins font-bold text-brand-blue mb-2">$2M+</div>
-              <div className="text-slate-600 font-medium">Transferred</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-poppins font-bold text-brand-green mb-2">15,000+</div>
-              <div className="text-slate-600 font-medium">Happy Users</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-poppins font-bold text-viet-red mb-2">90%</div>
-              <div className="text-slate-600 font-medium">Lower Fees</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-poppins font-bold text-purple-600 mb-2">3min</div>
-              <div className="text-slate-600 font-medium">Average Transfer</div>
-            </div>
-          </div>
+              </div>
+              <blockquote className="text-lg text-slate-700 italic mb-4 leading-relaxed">
+                {t('social.founderQuote')}
+              </blockquote>
+              <p className="text-slate-600 font-medium">
+                {t('social.founderName')}
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -418,9 +347,15 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-6">
             {t('waitlist.title')}
           </h2>
-          <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             {t('waitlist.subtitle')}
           </p>
+          
+          <div className="bg-yellow-900/30 border border-yellow-500/50 rounded-lg p-4 mb-12 max-w-2xl mx-auto">
+            <p className="text-yellow-200 text-sm text-center">
+              ⚠️ {t('waitlist.disclaimer')}
+            </p>
+          </div>
 
           <Card className="max-w-md mx-auto">
             <CardContent className="p-8">
@@ -499,40 +434,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Facebook Redirect Section */}
-      <section className="py-20 bg-blue-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Card>
-            <CardContent className="p-12">
-              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-8">
-                <MessageCircle className="w-10 h-10 text-white" />
-              </div>
-              
-              <h2 className="text-3xl md:text-4xl font-poppins font-bold text-slate-900 mb-6">
-                Ready to Try LiXi?
-              </h2>
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Experience our service firsthand through Facebook Messenger. Send your first transfer in minutes.
-              </p>
 
-              <Button 
-                onClick={handleFacebookRedirect}
-                className="inline-flex items-center space-x-3 bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-xl font-poppins font-semibold text-xl transition-all duration-200 transform hover:scale-105 shadow-lg"
-              >
-                <MessageCircle className="w-6 h-6" />
-                <span>Open Messenger</span>
-                <ExternalLink className="w-5 h-5" />
-              </Button>
-
-              <div className="mt-8 text-center">
-                <p className="text-sm text-slate-500">
-                  Opens in a new tab • No personal information required to start
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-16">
