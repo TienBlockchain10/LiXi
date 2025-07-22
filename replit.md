@@ -7,6 +7,8 @@ This is a full-stack web application built with a modern TypeScript stack featur
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Target audience: Vietnamese-speaking users and Vietnamese Americans
+Language support: English and Vietnamese with toggle functionality
 
 ## System Architecture
 
@@ -50,6 +52,8 @@ Preferred communication style: Simple, everyday language.
 - **Forms**: Type-safe forms with validation feedback
 - **State Management**: React Query for caching and synchronization
 - **Responsive Design**: Mobile-first approach with Tailwind breakpoints
+- **Internationalization**: Vietnamese and English language support with React Context
+- **Language Toggle**: Dynamic language switching component in header
 
 ## Data Flow
 
@@ -111,3 +115,13 @@ Preferred communication style: Simple, everyday language.
 4. **shadcn/ui**: Provides a complete, accessible UI component system that can be customized and extended as needed.
 
 5. **Monorepo Structure**: Frontend (`client/`), backend (`server/`), and shared code (`shared/`) in a single repository for easier development and deployment.
+
+6. **Language Support**: Implemented comprehensive Vietnamese and English translations using React Context, enabling the site to serve both Vietnamese-speaking users and English-speaking Vietnamese Americans effectively.
+
+## Recent Changes
+
+- **Vietnamese Language Support (January 2025)**: Added complete bilingual functionality
+  - Created LanguageContext with comprehensive translations for all UI text
+  - Implemented LanguageToggle component with header and hero variants  
+  - Updated all sections (hero, values, how-it-works, social proof, waitlist form) to use translation keys
+  - Fixed CSS import order and TypeScript import issues

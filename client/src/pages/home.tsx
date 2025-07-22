@@ -1,15 +1,18 @@
 import { useState } from "react";
-import { useMutation, queryClient } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
+import { queryClient } from "@/lib/queryClient";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertWaitlistEntrySchema, type InsertWaitlistEntry } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { LanguageToggle } from "@/components/LanguageToggle";
 import { 
   Facebook, 
   Shield, 
@@ -29,6 +32,7 @@ import {
 
 export default function Home() {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [showSuccess, setShowSuccess] = useState(false);
 
   const form = useForm<InsertWaitlistEntry>({
@@ -49,8 +53,8 @@ export default function Home() {
       setShowSuccess(true);
       form.reset();
       toast({
-        title: "Welcome to the waitlist!",
-        description: "We'll be in touch soon with early access.",
+        title: t('waitlist.successTitle'),
+        description: t('waitlist.successDescription'),
       });
     },
     onError: (error: any) => {
@@ -82,15 +86,18 @@ export default function Home() {
               <div className="w-10 h-10 bg-gradient-to-br from-brand-blue to-brand-green rounded-lg flex items-center justify-center">
                 <Coins className="text-white w-5 h-5" />
               </div>
-              <h1 className="text-xl font-poppins font-bold text-slate-900">VietCoin Remit</h1>
+              <h1 className="text-xl font-poppins font-bold text-slate-900">{t('header.title')}</h1>
             </div>
-            <Button 
-              onClick={handleFacebookRedirect}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-2"
-            >
-              <MessageCircle className="w-4 h-4" />
-              <span>Get Started</span>
-            </Button>
+            <div className="flex items-center space-x-3">
+              <LanguageToggle variant="header" />
+              <Button 
+                onClick={handleFacebookRedirect}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-2"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span>{t('header.getStarted')}</span>
+              </Button>
+            </div>
           </div>
         </div>
       </header>
@@ -102,11 +109,11 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-white mb-6 leading-tight">
-              Send Money to Vietnam
-              <span className="block text-viet-yellow">Fast, Secure, Affordable</span>
+              {t('hero.title')}
+              <span className="block text-viet-yellow">{t('hero.subtitle')}</span>
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Revolutionary stablecoin remittance service through Facebook Messenger. No apps to download, no complex processes - just instant, secure transfers to your family in Vietnam.
+              {t('hero.description')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -114,7 +121,7 @@ export default function Home() {
                 onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-viet-red hover:bg-red-700 text-white px-8 py-4 rounded-xl font-poppins font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
               >
-                Join Waitlist
+                {t('hero.joinWaitlist')}
               </Button>
               <Button 
                 onClick={handleFacebookRedirect}
@@ -122,7 +129,7 @@ export default function Home() {
                 className="bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 text-white px-8 py-4 rounded-xl font-poppins font-semibold text-lg transition-all duration-200 hover:bg-opacity-30 flex items-center space-x-2"
               >
                 <MessageCircle className="w-5 h-5" />
-                <span>Try on Messenger</span>
+                <span>{t('hero.tryMessenger')}</span>
               </Button>
             </div>
 
@@ -130,15 +137,15 @@ export default function Home() {
             <div className="flex flex-wrap justify-center items-center gap-8 text-blue-100">
               <div className="flex items-center space-x-2">
                 <Shield className="w-6 h-6 text-viet-yellow" />
-                <span className="font-medium">Bank-Level Security</span>
+                <span className="font-medium">{t('hero.bankSecurity')}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Clock className="w-6 h-6 text-viet-yellow" />
-                <span className="font-medium">Minutes, Not Days</span>
+                <span className="font-medium">{t('hero.fastTransfer')}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Percent className="w-6 h-6 text-viet-yellow" />
-                <span className="font-medium">90% Lower Fees</span>
+                <span className="font-medium">{t('hero.lowFees')}</span>
               </div>
             </div>
           </div>
@@ -150,10 +157,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-poppins font-bold text-slate-900 mb-4">
-              Why Choose VietCoin Remit?
+              {t('values.title')}
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Built specifically for the Vietnamese-American community with cutting-edge blockchain technology
+              {t('values.subtitle')}
             </p>
           </div>
 
@@ -163,9 +170,9 @@ export default function Home() {
                 <div className="w-16 h-16 bg-gradient-to-br from-brand-blue to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <Zap className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">Lightning Fast</h3>
+                <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">{t('values.fast.title')}</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Transfers complete in minutes using stablecoin technology. No more waiting days for traditional wire transfers.
+                  {t('values.fast.description')}
                 </p>
               </CardContent>
             </Card>
@@ -175,9 +182,9 @@ export default function Home() {
                 <div className="w-16 h-16 bg-gradient-to-br from-brand-green to-green-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <DollarSign className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">Ultra Low Fees</h3>
+                <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">{t('values.lowCost.title')}</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Save up to 90% on transfer fees compared to traditional money transfer services. More money for your family.
+                  {t('values.lowCost.description')}
                 </p>
               </CardContent>
             </Card>
@@ -187,9 +194,9 @@ export default function Home() {
                 <div className="w-16 h-16 bg-gradient-to-br from-viet-red to-red-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <MessageCircle className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">Messenger Simple</h3>
+                <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">{t('values.simple.title')}</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Send money as easy as sending a text message. No apps to download, just use Facebook Messenger.
+                  {t('values.simple.description')}
                 </p>
               </CardContent>
             </Card>
@@ -199,9 +206,9 @@ export default function Home() {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">Bank-Level Security</h3>
+                <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">{t('values.secure.title')}</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Military-grade encryption and blockchain security ensure your money and data are always protected.
+                  {t('values.secure.description')}
                 </p>
               </CardContent>
             </Card>
@@ -211,9 +218,9 @@ export default function Home() {
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <TrendingUp className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">Stable Rates</h3>
+                <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">{t('values.stable.title')}</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Stablecoins eliminate volatility. Your family receives the exact amount you send, every time.
+                  {t('values.stable.description')}
                 </p>
               </CardContent>
             </Card>
@@ -223,9 +230,9 @@ export default function Home() {
                 <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">Vietnamese Focused</h3>
+                <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">{t('values.focused.title')}</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Built by and for the Vietnamese-American community. We understand your unique needs and culture.
+                  {t('values.focused.description')}
                 </p>
               </CardContent>
             </Card>
@@ -238,10 +245,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-poppins font-bold text-slate-900 mb-4">
-              How It Works
+              {t('howItWorks.title')}
             </h2>
             <p className="text-xl text-slate-600">
-              Three simple steps to send money to Vietnam
+              {t('howItWorks.subtitle')}
             </p>
           </div>
 
@@ -252,9 +259,9 @@ export default function Home() {
                   <span className="text-3xl font-poppins font-bold text-white">1</span>
                 </div>
               </div>
-              <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">Message Us</h3>
+              <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">{t('howItWorks.step1.title')}</h3>
               <p className="text-slate-600 leading-relaxed">
-                Start a conversation with our bot on Facebook Messenger. No apps to download or accounts to create.
+                {t('howItWorks.step1.description')}
               </p>
             </div>
 
@@ -264,9 +271,9 @@ export default function Home() {
                   <span className="text-3xl font-poppins font-bold text-white">2</span>
                 </div>
               </div>
-              <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">Send Details</h3>
+              <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">{t('howItWorks.step2.title')}</h3>
               <p className="text-slate-600 leading-relaxed">
-                Tell us how much to send, who to send it to, and how they should receive it in Vietnam.
+                {t('howItWorks.step2.description')}
               </p>
             </div>
 
@@ -276,9 +283,9 @@ export default function Home() {
                   <span className="text-3xl font-poppins font-bold text-white">3</span>
                 </div>
               </div>
-              <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">Money Delivered</h3>
+              <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">{t('howItWorks.step3.title')}</h3>
               <p className="text-slate-600 leading-relaxed">
-                Your family receives the money in minutes. Track the entire process through our secure platform.
+                {t('howItWorks.step3.description')}
               </p>
             </div>
           </div>
@@ -289,7 +296,7 @@ export default function Home() {
               className="inline-flex items-center space-x-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-poppins font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
             >
               <MessageCircle className="w-5 h-5" />
-              <span>Try It Now on Messenger</span>
+              <span>{t('howItWorks.tryNow')}</span>
               <ExternalLink className="w-4 h-4" />
             </Button>
           </div>
@@ -301,10 +308,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-poppins font-bold text-slate-900 mb-4">
-              Trusted by Vietnamese Americans
+              {t('social.title')}
             </h2>
             <p className="text-xl text-slate-600">
-              Join thousands who are already saving money and time
+              {t('social.subtitle')}
             </p>
           </div>
 
@@ -408,10 +415,10 @@ export default function Home() {
       <section id="waitlist" className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-6">
-            Join the Waitlist
+            {t('waitlist.title')}
           </h2>
           <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Be among the first to experience the future of remittances. Get early access and exclusive launch bonuses.
+            {t('waitlist.subtitle')}
           </p>
 
           <Card className="max-w-md mx-auto">
@@ -426,12 +433,12 @@ export default function Home() {
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <div>
                     <Label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2 text-left">
-                      Email Address
+                      {t('waitlist.email')}
                     </Label>
                     <Input
                       {...form.register("email")}
                       type="email"
-                      placeholder="your.email@example.com"
+                      placeholder={t('waitlist.emailPlaceholder')}
                       className="w-full"
                     />
                     {form.formState.errors.email && (
@@ -441,12 +448,12 @@ export default function Home() {
                   
                   <div>
                     <Label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2 text-left">
-                      Full Name
+                      {t('waitlist.name')}
                     </Label>
                     <Input
                       {...form.register("name")}
                       type="text"
-                      placeholder="Nguyen Van A"
+                      placeholder={t('waitlist.namePlaceholder')}
                       className="w-full"
                     />
                     {form.formState.errors.name && (
@@ -456,11 +463,11 @@ export default function Home() {
 
                   <div>
                     <Label htmlFor="monthlyAmount" className="block text-sm font-medium text-slate-700 mb-2 text-left">
-                      Monthly Transfer Amount (Optional)
+                      {t('waitlist.monthlyAmount')}
                     </Label>
                     <Select onValueChange={(value) => form.setValue("monthlyAmount", value)}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select amount range" />
+                        <SelectValue placeholder={t('waitlist.monthlyAmountPlaceholder')} />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="under-500">Under $500</SelectItem>
@@ -476,7 +483,7 @@ export default function Home() {
                     disabled={joinWaitlistMutation.isPending}
                     className="w-full bg-gradient-to-r from-brand-blue to-brand-green hover:from-blue-700 hover:to-green-700 text-white py-4 rounded-lg font-poppins font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
                   >
-                    {joinWaitlistMutation.isPending ? "Joining..." : "Join Waitlist"}
+                    {joinWaitlistMutation.isPending ? t('waitlist.submitting') : t('waitlist.submitButton')}
                   </Button>
                 </form>
               )}
