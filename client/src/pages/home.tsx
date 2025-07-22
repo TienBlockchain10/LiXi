@@ -86,16 +86,17 @@ export default function Home() {
               <div className="w-10 h-10 bg-gradient-to-br from-brand-blue to-brand-green rounded-lg flex items-center justify-center">
                 <Coins className="text-white w-5 h-5" />
               </div>
-              <h1 className="text-xl font-poppins font-bold text-slate-900">{t('header.title')}</h1>
+              <h1 className="text-lg sm:text-xl font-poppins font-bold text-slate-900">{t('header.title')}</h1>
             </div>
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2 sm:space-x-3">
               <LanguageToggle variant="header" />
               <Button 
                 onClick={handleFacebookRedirect}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-2"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-1 sm:space-x-2"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>{t('header.getStarted')}</span>
+                <span className="hidden sm:inline">{t('header.getStarted')}</span>
+                <span className="sm:hidden">Start</span>
               </Button>
             </div>
           </div>
@@ -104,29 +105,28 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-brand-blue via-blue-700 to-brand-green py-20 lg:py-32">
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-white mb-6 leading-tight">
               {t('hero.title')}
-              <span className="block text-viet-yellow">{t('hero.subtitle')}</span>
+              <span className="block text-yellow-400">{t('hero.subtitle')}</span>
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
               {t('hero.description')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button 
                 onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-viet-red hover:bg-red-700 text-white px-8 py-4 rounded-xl font-poppins font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+                className="w-full sm:w-auto bg-viet-red hover:bg-red-700 text-white px-8 py-4 rounded-xl font-poppins font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
               >
                 {t('hero.joinWaitlist')}
               </Button>
               <Button 
                 onClick={handleFacebookRedirect}
                 variant="outline"
-                className="bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 text-white px-8 py-4 rounded-xl font-poppins font-semibold text-lg transition-all duration-200 hover:bg-opacity-30 flex items-center space-x-2"
+                className="w-full sm:w-auto bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 text-white px-8 py-4 rounded-xl font-poppins font-semibold text-lg transition-all duration-200 hover:bg-opacity-30 flex items-center justify-center space-x-2"
               >
                 <MessageCircle className="w-5 h-5" />
                 <span>{t('hero.tryMessenger')}</span>
@@ -134,17 +134,17 @@ export default function Home() {
             </div>
 
             {/* Trust indicators */}
-            <div className="flex flex-wrap justify-center items-center gap-8 text-blue-100">
-              <div className="flex items-center space-x-2">
-                <Shield className="w-6 h-6 text-viet-yellow" />
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-blue-100">
+              <div className="flex items-center space-x-2 text-sm sm:text-base">
+                <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" />
                 <span className="font-medium">{t('hero.bankSecurity')}</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Clock className="w-6 h-6 text-viet-yellow" />
+              <div className="flex items-center space-x-2 text-sm sm:text-base">
+                <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" />
                 <span className="font-medium">{t('hero.fastTransfer')}</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Percent className="w-6 h-6 text-viet-yellow" />
+              <div className="flex items-center space-x-2 text-sm sm:text-base">
+                <Percent className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" />
                 <span className="font-medium">{t('hero.lowFees')}</span>
               </div>
             </div>

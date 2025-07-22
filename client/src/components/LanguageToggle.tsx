@@ -14,8 +14,8 @@ export function LanguageToggle({ variant = 'header' }: LanguageToggleProps) {
     setLanguage(newLanguage);
   };
 
-  const headerClasses = "flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 transition-all duration-200";
-  const heroClasses = "flex items-center space-x-2 bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 text-white hover:bg-opacity-30 transition-all duration-200";
+  const headerClasses = "flex items-center space-x-1 sm:space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 transition-all duration-200";
+  const heroClasses = "flex items-center space-x-1 sm:space-x-2 bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 text-white hover:bg-opacity-30 transition-all duration-200";
 
   return (
     <Button
@@ -25,8 +25,8 @@ export function LanguageToggle({ variant = 'header' }: LanguageToggleProps) {
       className={variant === 'header' ? headerClasses : heroClasses}
     >
       <Globe className="w-4 h-4" />
-      <span className="font-medium">
-        {language === 'en' ? 'Tiếng Việt' : 'English'}
+      <span className="font-medium text-xs sm:text-sm">
+        {language === 'en' ? 'VI' : 'EN'}
       </span>
     </Button>
   );
