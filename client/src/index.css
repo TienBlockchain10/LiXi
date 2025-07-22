@@ -26,19 +26,20 @@
   --ring: hsl(20, 14.3%, 4.1%);
   --radius: 0.5rem;
   
-  /* LiXi Dragon-inspired orange/black theme */
-  --lixi-orange: hsl(25, 100%, 50%);
-  --lixi-orange-light: hsl(30, 100%, 60%);
-  --lixi-orange-dark: hsl(20, 100%, 40%);
-  --lixi-gold: hsl(45, 100%, 65%);
+  /* LiXi Dragon-inspired orange/black theme - Vibrant colors */
+  --lixi-orange: hsl(20, 100%, 60%);
+  --lixi-orange-light: hsl(25, 100%, 70%);
+  --lixi-orange-dark: hsl(15, 100%, 50%);
+  --lixi-orange-bright: hsl(30, 100%, 65%);
+  --lixi-gold: hsl(45, 100%, 70%);
   --lixi-black: hsl(0, 0%, 8%);
   --lixi-charcoal: hsl(0, 0%, 15%);
   
   /* Legacy brand colors for compatibility */
-  --brand-blue: hsl(25, 100%, 50%);
-  --brand-green: hsl(30, 100%, 60%);
-  --viet-red: hsl(20, 100%, 40%);
-  --viet-yellow: hsl(45, 100%, 65%);
+  --brand-blue: hsl(20, 100%, 60%);
+  --brand-green: hsl(25, 100%, 70%);
+  --viet-red: hsl(15, 100%, 50%);
+  --viet-yellow: hsl(45, 100%, 70%);
 }
 
 .dark {

@@ -120,11 +120,15 @@ Language support: English and Vietnamese with toggle functionality
 
 ## Recent Changes
 
-- **Orange/Black Dragon Theme Update (January 2025)**: Updated brand colors to match pitch deck design
-  - Implemented orange gradient hero background (#ff6600 to #1a1a1a) inspired by dragon motif
-  - Updated all brand colors from blue/green to orange/black theme throughout the application
-  - Changed buttons, icons, and accent colors to match new orange branding
-  - Updated footer with dark gradient background for cohesive design
+- **Dark Theme with Vibrant Orange (January 2025)**: Transformed website to dark theme with bright orange accents
+  - Changed entire site background from light (bg-slate-50) to dark (bg-gray-900/800)
+  - Updated hero gradient to more vibrant orange spectrum (#ff4500 to #ffb74d to #1a1a1a)
+  - Changed all text from dark to light colors for dark theme compatibility
+  - Updated all cards and components to dark gray backgrounds (bg-gray-700) with gray borders
+  - Made orange colors more vibrant and bright throughout (orange-400, orange-500, orange-600)
+  - Updated header to dark theme (bg-gray-800) with white text
+  - Removed "Licensed Money Transmitter" disclaimer from footer (company not yet licensed)
+  - Updated form elements and labels to light colors for dark theme visibility
 
 - **Content Refinement (January 2025)**: Updated messaging and removed beta language
   - Changed hero title back to "Send Money to Vietnam" with "Fast, Secure, Affordable" subtitle
