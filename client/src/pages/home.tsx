@@ -77,7 +77,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-50">
+    <div className="min-h-screen bg-slate-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -104,15 +104,16 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-brand-blue via-blue-700 to-brand-green py-20 lg:py-32">
+      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 py-20 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-green-900/20"></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-white mb-6 leading-tight drop-shadow-lg">
               {t('hero.title')}
-              <span className="block text-yellow-400">{t('hero.subtitle')}</span>
+              <span className="block text-yellow-300 drop-shadow-lg">{t('hero.subtitle')}</span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0 drop-shadow-md">
               {t('hero.description')}
             </p>
             
@@ -126,7 +127,7 @@ export default function Home() {
               <Button 
                 onClick={handleFacebookRedirect}
                 variant="outline"
-                className="w-full sm:w-auto bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 text-white px-8 py-4 rounded-xl font-poppins font-semibold text-lg transition-all duration-200 hover:bg-opacity-30 flex items-center justify-center space-x-2"
+                className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-xl font-poppins font-semibold text-lg transition-all duration-200 hover:bg-white/20 flex items-center justify-center space-x-2"
               >
                 <MessageCircle className="w-5 h-5" />
                 <span>{t('hero.tryMessenger')}</span>
@@ -134,17 +135,17 @@ export default function Home() {
             </div>
 
             {/* Trust indicators */}
-            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-blue-100">
-              <div className="flex items-center space-x-2 text-sm sm:text-base">
-                <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" />
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-white/90">
+              <div className="flex items-center space-x-2 text-sm sm:text-base bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm">
+                <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-300" />
                 <span className="font-medium">{t('hero.bankSecurity')}</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm sm:text-base">
-                <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" />
+              <div className="flex items-center space-x-2 text-sm sm:text-base bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm">
+                <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-300" />
                 <span className="font-medium">{t('hero.fastTransfer')}</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm sm:text-base">
-                <Percent className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" />
+              <div className="flex items-center space-x-2 text-sm sm:text-base bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm">
+                <Percent className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-300" />
                 <span className="font-medium">{t('hero.lowFees')}</span>
               </div>
             </div>
