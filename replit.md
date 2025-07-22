@@ -125,3 +125,10 @@ Language support: English and Vietnamese with toggle functionality
   - Implemented LanguageToggle component with header and hero variants  
   - Updated all sections (hero, values, how-it-works, social proof, waitlist form) to use translation keys
   - Fixed CSS import order and TypeScript import issues
+
+- **Rebranding and Content Updates (January 2025)**: Updated from VietCoin Remit to LiXi
+  - Changed all references from "VietCoin Remit" to "LiXi" throughout the application
+  - Updated content to focus on "stablecoin technology" instead of "blockchain technology"
+  - Fixed visual issues with step numbers and icon visibility in value proposition cards
+  - Updated star ratings to use proper yellow colors instead of barely visible viet-yellow
+  - Ensured all testimonials use the translation system for proper bilingual support

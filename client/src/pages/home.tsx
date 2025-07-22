@@ -77,7 +77,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -167,7 +167,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="bg-slate-50 hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-brand-blue to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <Zap className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">{t('values.fast.title')}</h3>
@@ -179,7 +179,7 @@ export default function Home() {
 
             <Card className="bg-slate-50 hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-brand-green to-green-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <DollarSign className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">{t('values.lowCost.title')}</h3>
@@ -191,7 +191,7 @@ export default function Home() {
 
             <Card className="bg-slate-50 hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-viet-red to-red-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <MessageCircle className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">{t('values.simple.title')}</h3>
@@ -255,7 +255,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="relative mb-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-brand-blue to-blue-600 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto shadow-lg">
                   <span className="text-3xl font-poppins font-bold text-white">1</span>
                 </div>
               </div>
@@ -267,7 +267,7 @@ export default function Home() {
 
             <div className="text-center">
               <div className="relative mb-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-brand-green to-green-600 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center mx-auto shadow-lg">
                   <span className="text-3xl font-poppins font-bold text-white">2</span>
                 </div>
               </div>
@@ -279,7 +279,7 @@ export default function Home() {
 
             <div className="text-center">
               <div className="relative mb-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-viet-red to-red-600 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mx-auto shadow-lg">
                   <span className="text-3xl font-poppins font-bold text-white">3</span>
                 </div>
               </div>
@@ -319,14 +319,14 @@ export default function Home() {
             <Card className="bg-slate-50">
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
-                  <div className="flex text-viet-yellow text-xl">
+                  <div className="flex text-yellow-400 text-xl">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-current" />
                     ))}
                   </div>
                 </div>
                 <p className="text-slate-700 mb-6 italic leading-relaxed">
-                  "Finally, a service that understands our community. Sending money to my parents in Saigon has never been this easy and affordable."
+                  {t('social.testimonial1')}
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mr-4">
@@ -343,14 +343,14 @@ export default function Home() {
             <Card className="bg-slate-50">
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
-                  <div className="flex text-viet-yellow text-xl">
+                  <div className="flex text-yellow-400 text-xl">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-current" />
                     ))}
                   </div>
                 </div>
                 <p className="text-slate-700 mb-6 italic leading-relaxed">
-                  "The speed is incredible. My family in Hanoi received the money in under 5 minutes. No more expensive Western Union fees!"
+                  {t('social.testimonial2')}
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center mr-4">
@@ -367,14 +367,14 @@ export default function Home() {
             <Card className="bg-slate-50">
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
-                  <div className="flex text-viet-yellow text-xl">
+                  <div className="flex text-yellow-400 text-xl">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-current" />
                     ))}
                   </div>
                 </div>
                 <p className="text-slate-700 mb-6 italic leading-relaxed">
-                  "Using Facebook Messenger makes it so convenient. I can send money while chatting with my family - it's genius!"
+                  {t('social.testimonial3')}
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center mr-4">
@@ -508,7 +508,7 @@ export default function Home() {
               </div>
               
               <h2 className="text-3xl md:text-4xl font-poppins font-bold text-slate-900 mb-6">
-                Ready to Try VietCoin Remit?
+                Ready to Try LiXi?
               </h2>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
                 Experience our service firsthand through Facebook Messenger. Send your first transfer in minutes.
@@ -542,10 +542,10 @@ export default function Home() {
                 <div className="w-10 h-10 bg-gradient-to-br from-brand-blue to-brand-green rounded-lg flex items-center justify-center">
                   <Coins className="text-white w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-poppins font-bold">VietCoin Remit</h3>
+                <h3 className="text-xl font-poppins font-bold">LiXi</h3>
               </div>
               <p className="text-slate-300 leading-relaxed mb-6">
-                Revolutionizing remittances for the Vietnamese-American community through secure, fast, and affordable stablecoin transfers via Facebook Messenger.
+                {t('footer.description')}
               </p>
               <div className="flex space-x-4">
                 <div className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors duration-200">

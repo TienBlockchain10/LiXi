@@ -13,7 +13,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 // English translations
 const en = {
   // Header
-  'header.title': 'VietCoin Remit',
+  'header.title': 'LiXi',
   'header.getStarted': 'Get Started',
   
   // Hero Section
@@ -27,8 +27,8 @@ const en = {
   'hero.lowFees': '90% Lower Fees',
   
   // Value Propositions
-  'values.title': 'Why Choose VietCoin Remit?',
-  'values.subtitle': 'Built specifically for the Vietnamese-American community with cutting-edge blockchain technology',
+  'values.title': 'Why Choose LiXi?',
+  'values.subtitle': 'Built specifically for the Vietnamese-American community with secure stablecoin technology',
   'values.fast.title': 'Lightning Fast',
   'values.fast.description': 'Transfers complete in minutes using stablecoin technology. No more waiting days for traditional wire transfers.',
   'values.lowCost.title': 'Ultra Low Fees',
@@ -36,7 +36,7 @@ const en = {
   'values.simple.title': 'Messenger Simple',
   'values.simple.description': 'Send money as easy as sending a text message. No apps to download, just use Facebook Messenger.',
   'values.secure.title': 'Bank-Level Security',
-  'values.secure.description': 'Military-grade encryption and blockchain security ensure your money and data are always protected.',
+  'values.secure.description': 'Military-grade encryption and stablecoin security ensure your money and data are always protected.',
   'values.stable.title': 'Stable Rates',
   'values.stable.description': 'Stablecoins eliminate volatility. Your family receives the exact amount you send, every time.',
   'values.focused.title': 'Vietnamese Focused',
@@ -57,8 +57,8 @@ const en = {
   'social.title': 'Trusted by Vietnamese Americans',
   'social.subtitle': 'Join thousands who are already saving money and time',
   'social.testimonial1': '"Finally, a service that understands our community. Sending money to my parents in Saigon has never been this easy and affordable."',
-  'social.testimonial2': '"The speed is incredible. What used to take 3-5 days now happens in just a few minutes. My family loves how convenient it is."',
-  'social.testimonial3': '"As someone who sends money regularly, the fee savings really add up. This service has saved me hundreds of dollars already."',
+  'social.testimonial2': '"The speed is incredible. My family in Hanoi received the money in under 5 minutes. No more expensive Western Union fees!"',
+  'social.testimonial3': '"Using Facebook Messenger makes it so convenient. I can send money while chatting with my family - it\'s genius!"',
   
   // Waitlist Form
   'waitlist.title': 'Join Our Waitlist',
@@ -79,14 +79,14 @@ const en = {
   'waitlist.benefit3': 'Priority customer support',
   
   // Footer
-  'footer.description': 'Revolutionizing remittances for the Vietnamese-American community through blockchain technology and messenger convenience.',
+  'footer.description': 'Revolutionizing remittances for the Vietnamese-American community through stablecoin technology and messenger convenience.',
   'footer.rights': 'All rights reserved.',
 };
 
 // Vietnamese translations
 const vi = {
   // Header
-  'header.title': 'VietCoin Remit',
+  'header.title': 'LiXi',
   'header.getStarted': 'Bắt Đầu',
   
   // Hero Section
@@ -100,8 +100,8 @@ const vi = {
   'hero.lowFees': 'Phí Thấp Hơn 90%',
   
   // Value Propositions
-  'values.title': 'Tại Sao Chọn VietCoin Remit?',
-  'values.subtitle': 'Được xây dựng đặc biệt cho cộng đồng Việt kiều Mỹ với công nghệ blockchain tiên tiến',
+  'values.title': 'Tại Sao Chọn LiXi?',
+  'values.subtitle': 'Được xây dựng đặc biệt cho cộng đồng Việt kiều Mỹ với công nghệ stablecoin bảo mật',
   'values.fast.title': 'Siêu Nhanh',
   'values.fast.description': 'Chuyển tiền hoàn tất trong vài phút bằng công nghệ stablecoin. Không còn chờ đợi hàng ngày như chuyển tiền truyền thống.',
   'values.lowCost.title': 'Phí Cực Thấp',
@@ -109,7 +109,7 @@ const vi = {
   'values.simple.title': 'Đơn Giản Như Messenger',
   'values.simple.description': 'Gửi tiền dễ dàng như gửi tin nhắn. Không cần tải ứng dụng, chỉ cần dùng Facebook Messenger.',
   'values.secure.title': 'Bảo Mật Cấp Ngân Hàng',
-  'values.secure.description': 'Mã hóa quân sự và bảo mật blockchain đảm bảo tiền và dữ liệu của bạn luôn được bảo vệ.',
+  'values.secure.description': 'Mã hóa quân sự và bảo mật stablecoin đảm bảo tiền và dữ liệu của bạn luôn được bảo vệ.',
   'values.stable.title': 'Tỷ Giá Ổn Định',
   'values.stable.description': 'Stablecoin loại bỏ biến động. Gia đình bạn nhận đúng số tiền bạn gửi, mọi lúc.',
   'values.focused.title': 'Chuyên Cho Người Việt',
@@ -127,11 +127,11 @@ const vi = {
   'howItWorks.tryNow': 'Thử Ngay Trên Messenger',
   
   // Social Proof
-  'social.title': 'Được Tin Tưởng Bởi Người Việt Mỹ',
+  'social.title': 'Được Tin Cậy Bởi Cộng Đồng Việt Mỹ',
   'social.subtitle': 'Tham gia cùng hàng nghìn người đã tiết kiệm tiền và thời gian',
-  'social.testimonial1': '"Cuối cùng, một dịch vụ hiểu cộng đồng của chúng ta. Gửi tiền cho bố mẹ ở Sài Gòn chưa bao giờ dễ dàng và tiết kiệm như thế này."',
-  'social.testimonial2': '"Tốc độ thật không thể tin được. Những gì trước đây mất 3-5 ngày giờ chỉ xảy ra trong vài phút. Gia đình tôi thích sự tiện lợi này."',
-  'social.testimonial3': '"Với tư cách là người thường xuyên gửi tiền, việc tiết kiệm phí thực sự tích lũy. Dịch vụ này đã giúp tôi tiết kiệm hàng trăm đô la rồi."',
+  'social.testimonial1': '"Cuối cùng cũng có dịch vụ hiểu cộng đồng của chúng ta. Gửi tiền cho bố mẹ ở Sài Gòn chưa bao giờ dễ dàng và rẻ như vậy."',
+  'social.testimonial2': '"Tốc độ không thể tin nổi. Gia đình ở Hà Nội nhận tiền trong vòng 5 phút. Không còn phải trả phí đắt đỏ của Western Union!"',
+  'social.testimonial3': '"Dùng Facebook Messenger thật tiện lợi. Có thể gửi tiền khi đang chat với gia đình - thật tuyệt vời!"',
   
   // Waitlist Form
   'waitlist.title': 'Đăng Ký Danh Sách Chờ',
@@ -152,7 +152,7 @@ const vi = {
   'waitlist.benefit3': 'Hỗ trợ khách hàng ưu tiên',
   
   // Footer
-  'footer.description': 'Cách mạng hóa chuyển tiền cho cộng đồng Việt kiều Mỹ thông qua công nghệ blockchain và sự tiện lợi của messenger.',
+  'footer.description': 'Cách mạng hóa chuyển tiền cho cộng đồng Việt kiều Mỹ thông qua công nghệ stablecoin và sự tiện lợi của messenger.',
   'footer.rights': 'Mọi quyền được bảo lưu.',
 };
 
