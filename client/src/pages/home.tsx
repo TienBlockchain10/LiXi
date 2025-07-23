@@ -196,25 +196,25 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-50 hover:shadow-lg transition-shadow duration-300">
+            <Card className="bg-gray-700 hover:shadow-lg transition-shadow duration-300 border-gray-600">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">{t('values.secure.title')}</h3>
-                <p className="text-slate-600 leading-relaxed">
+                <h3 className="text-xl font-poppins font-semibold text-white mb-4">{t('values.secure.title')}</h3>
+                <p className="text-gray-300 leading-relaxed">
                   {t('values.secure.description')}
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-50 hover:shadow-lg transition-shadow duration-300">
+            <Card className="bg-gray-700 hover:shadow-lg transition-shadow duration-300 border-gray-600">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <TrendingUp className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-poppins font-semibold text-slate-900 mb-4">{t('values.stable.title')}</h3>
-                <p className="text-slate-600 leading-relaxed">
+                <h3 className="text-xl font-poppins font-semibold text-white mb-4">{t('values.stable.title')}</h3>
+                <p className="text-gray-300 leading-relaxed">
                   {t('values.stable.description')}
                 </p>
               </CardContent>
