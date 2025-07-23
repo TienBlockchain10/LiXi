@@ -73,6 +73,12 @@
   body {
     @apply font-inter antialiased bg-background text-foreground;
   }
+  
+  /* Ensure cards inherit proper dark mode styling */
+  .dark {
+    --card: hsl(240, 10%, 3.9%);
+    --card-foreground: hsl(0, 0%, 98%);
+  }
 }
 
 @layer utilities {
