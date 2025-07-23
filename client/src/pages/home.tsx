@@ -162,7 +162,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="bg-gray-700 hover:shadow-lg transition-shadow duration-300 border-gray-600">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <Zap className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-poppins font-semibold text-white mb-4">{t('values.fast.title')}</h3>
@@ -174,7 +174,7 @@ export default function Home() {
 
             <Card className="bg-gray-700 hover:shadow-lg transition-shadow duration-300 border-gray-600">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <DollarSign className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-poppins font-semibold text-white mb-4">{t('values.lowCost.title')}</h3>
@@ -186,7 +186,7 @@ export default function Home() {
 
             <Card className="bg-gray-700 hover:shadow-lg transition-shadow duration-300 border-gray-600">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <MessageCircle className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-poppins font-semibold text-white mb-4">{t('values.simple.title')}</h3>
@@ -210,7 +210,7 @@ export default function Home() {
 
             <Card className="bg-gray-700 hover:shadow-lg transition-shadow duration-300 border-gray-600">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <TrendingUp className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-poppins font-semibold text-white mb-4">{t('values.stable.title')}</h3>
@@ -222,7 +222,7 @@ export default function Home() {
 
             <Card className="bg-gray-700 hover:shadow-lg transition-shadow duration-300 border-gray-600">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-600 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <Users className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-poppins font-semibold text-white mb-4">{t('values.focused.title')}</h3>
