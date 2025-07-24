@@ -1,6 +1,7 @@
 import { Handler } from '@netlify/functions';
-import { insertWaitlistEntrySchema } from '../shared/schema';
-import { storage } from '../server/storage';
+import { insertWaitlistEntrySchema } from '../../shared/schema';
+import { storage } from '../../server/storage';
+import { addToEmailOctopus } from '../../server/emailOctopus';
 
 export const handler: Handler = async (event) => {
   const data = JSON.parse(event.body ?? '{}');
