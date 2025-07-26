@@ -73,7 +73,7 @@ export default function Home() {
 
   const handleFacebookRedirect = () => {
     // Replace with actual Facebook page URL
-    window.open("https://www.facebook.com/messages", "_blank", "noopener,noreferrer");
+    window.open("https://www.facebook.com/SendLixi", "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -450,9 +450,14 @@ export default function Home() {
                 {t('footer.description')}
               </p>
               <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors duration-200">
+               <a
+                  href="https://www.facebook.com/SendLixi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors duration-200"
+                >
                   <Facebook className="w-5 h-5" />
-                </div>
+                </a>               
               </div>
             </div>
 

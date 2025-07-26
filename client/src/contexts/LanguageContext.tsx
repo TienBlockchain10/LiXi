@@ -14,7 +14,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const en = {
   // Header
   'header.title': 'LiXi',
-  'header.getStarted': 'Get Started',
+  'header.getStarted': 'Check us Out!',
   
   // Hero Section
   'hero.title': 'Send Money to Vietnam',
@@ -52,20 +52,20 @@ const en = {
   'howItWorks.step2.description': 'Tell us who to send money to, and how they\'d like to receive it (bank, Momo, cash pickup, etc.)',
   'howItWorks.step3.title': 'Money Delivered',
   'howItWorks.step3.description': 'Your family receives the funds in minutes — and you get full visibility the whole time.',
-  'howItWorks.tryNow': 'Join Beta Waitlist',
+  'howItWorks.tryNow': 'Follow our Facebook page to stay updated!',
   
   // Social Proof
   'social.title': 'Built for the Community',
   'social.subtitle': 'Join Our Pilot Cohort',
-  'social.pilotDescription': 'We\'re launching a private beta for the first 500 families.',
-  'social.bonus': 'Bonus: First transfer is free for the first 500 families once we go live!',
+  'social.pilotDescription': 'We\'re launching a private beta for the first 200 families.',
+  'social.bonus': 'Bonus: First transfer is free for the first 200 families once we go live!',
   'social.communityMessage': 'Be part of the future of remittances — and help shape a product built for our community.',
   'social.founderQuote': '"I built LiXi because I saw my own parents struggle to send money to Vietnam. Long drives. High fees. Complicated apps. It shouldn\'t be this hard."',
   'social.founderName': '— Tien Nguyen, Founder',
   
   // Waitlist Form
   'waitlist.title': 'Join the Waitlist',
-  'waitlist.subtitle': 'Be among the first 500 families in our private beta',
+  'waitlist.subtitle': 'Be among the first 200 families in our private beta',
   'waitlist.disclaimer': 'LiXi is currently in pre-launch and not yet available for public use.',
   'waitlist.name': 'Full Name',
   'waitlist.namePlaceholder': 'Enter your full name',
@@ -91,7 +91,7 @@ const en = {
 const vi = {
   // Header
   'header.title': 'LiXi',
-  'header.getStarted': 'Bắt Đầu',
+  'header.getStarted': 'Khám Phá!',
   
   // Hero Section
   'hero.title': 'Gửi Tiền Về Việt Nam',
@@ -129,20 +129,20 @@ const vi = {
   'howItWorks.step2.description': 'Cho chúng tôi biết gửi tiền cho ai và họ muốn nhận như thế nào (ngân hàng, Momo, nhận tiền mặt, v.v.)',
   'howItWorks.step3.title': 'Tiền Được Giao',
   'howItWorks.step3.description': 'Gia đình bạn nhận tiền trong vài phút — và bạn có thể theo dõi toàn bộ quá trình.',
-  'howItWorks.tryNow': 'Tham Gia Danh Sách Chờ Beta',
+  'howItWorks.tryNow': 'Theo dõi trang Facebook của chúng tôi để cập nhật!',
   
   // Social Proof
   'social.title': 'Xây Dựng Cho Cộng Đồng',
   'social.subtitle': 'Tham Gia Nhóm Thí Điểm Của Chúng Tôi',
-  'social.pilotDescription': 'Chúng tôi đang ra mắt bản beta riêng cho 500 gia đình đầu tiên.',
-  'social.bonus': 'Ưu đãi: Chuyển tiền đầu tiên miễn phí cho 500 gia đình đầu tiên khi chúng tôi hoạt động!',
+  'social.pilotDescription': 'Chúng tôi đang ra mắt bản beta riêng cho 200 gia đình đầu tiên.',
+  'social.bonus': 'Ưu đãi: Chuyển tiền đầu tiên miễn phí cho 200 gia đình đầu tiên khi chúng tôi hoạt động!',
   'social.communityMessage': 'Hãy là một phần của tương lai chuyển tiền — và giúp định hình sản phẩm được xây dựng cho cộng đồng của chúng ta.',
   'social.founderQuote': '"Tôi xây dựng LiXi vì thấy chính bố mẹ mình vất vả để gửi tiền về Việt Nam. Phải đi xa. Phí cao. Ứng dụng phức tạp. Không nên khó khăn như vậy."',
   'social.founderName': '— Tiến Nguyễn, Người Sáng Lập',
   
   // Waitlist Form
   'waitlist.title': 'Tham Gia Danh Sách Chờ',
-  'waitlist.subtitle': 'Hãy là một trong 500 gia đình đầu tiên trong bản beta riêng của chúng tôi',
+  'waitlist.subtitle': 'Hãy là một trong 200 gia đình đầu tiên trong bản beta riêng của chúng tôi',
   'waitlist.disclaimer': 'LiXi hiện đang trong giai đoạn tiền ra mắt và chưa có sẵn cho công chúng sử dụng.',
   'waitlist.name': 'Họ Tên',
   'waitlist.namePlaceholder': 'Nhập họ tên của bạn',
@@ -171,7 +171,7 @@ interface LanguageProviderProps {
 }
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>('vi');
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations[typeof language]] || key;
