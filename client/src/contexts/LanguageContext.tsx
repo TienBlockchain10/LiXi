@@ -14,7 +14,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const en = {
   // Header
   'header.title': 'LiXi',
-  'header.getStarted': 'Check us Out!',
+  'header.getStarted': 'Click Here!',
   
   // Hero Section
   'hero.title': 'Send Money to Vietnam',
@@ -52,7 +52,7 @@ const en = {
   'howItWorks.step2.description': 'Tell us who to send money to, and how they\'d like to receive it (bank, Momo, cash pickup, etc.)',
   'howItWorks.step3.title': 'Money Delivered',
   'howItWorks.step3.description': 'Your family receives the funds in minutes — and you get full visibility the whole time.',
-  'howItWorks.tryNow': 'Follow our Facebook page to stay updated!',
+  'howItWorks.tryNow': '🎬 Show Me!',
   
   // Social Proof
   'social.title': 'Built for the Community',
@@ -91,7 +91,7 @@ const en = {
 const vi = {
   // Header
   'header.title': 'LiXi',
-  'header.getStarted': 'Khám Phá!',
+  'header.getStarted': 'Bấm vào đây!',
   
   // Hero Section
   'hero.title': 'Gửi Tiền Về Việt Nam',
@@ -129,7 +129,7 @@ const vi = {
   'howItWorks.step2.description': 'Cho chúng tôi biết gửi tiền cho ai và họ muốn nhận như thế nào (ngân hàng, Momo, nhận tiền mặt, v.v.)',
   'howItWorks.step3.title': 'Tiền Được Giao',
   'howItWorks.step3.description': 'Gia đình bạn nhận tiền trong vài phút — và bạn có thể theo dõi toàn bộ quá trình.',
-  'howItWorks.tryNow': 'Theo dõi trang Facebook của chúng tôi để cập nhật!',
+  'howItWorks.tryNow': '🎬 Cho tôi xem!',
   
   // Social Proof
   'social.title': 'Xây Dựng Cho Cộng Đồng',

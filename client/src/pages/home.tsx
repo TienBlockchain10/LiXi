@@ -75,6 +75,9 @@ export default function Home() {
     // Replace with actual Facebook page URL
     window.open("https://www.facebook.com/SendLixi", "_blank", "noopener,noreferrer");
   };
+  const handleVideoRedirect = () => {
+    window.open("https://youtube.com/shorts/aEbvo7kQSzY?feature=share", "_blank", "noopener,noreferrer");
+  };
 
   return (
     <div className="min-h-screen bg-gray-900">
@@ -286,8 +289,9 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-16">
-            <Button 
-              onClick={handleFacebookRedirect}
+            
+              <Button
+              onClick={handleVideoRedirect}
               className="inline-flex items-center space-x-3 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-poppins font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
             >
               <MessageCircle className="w-5 h-5" />
